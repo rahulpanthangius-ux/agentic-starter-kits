@@ -35,11 +35,14 @@ spec:
               # The PVC is mounted at HOME so that OpenClaw owns its state directory
               # (~/.openclaw); the volume's mount point itself belongs to root. Earlier
               # versions of this recipe mounted the PVC at ~/.openclaw: move that state
-              # into ~/.openclaw once.
-              if [ ! -d .openclaw ] && [ -f openclaw.json ]; then
-                mkdir .openclaw
+              # into ~/.openclaw once. The marker file makes an interrupted move resume
+              # on the next start.
+              if [ -f .openclaw-migrating ] || { [ ! -d .openclaw ] && [ -f openclaw.json ]; }; then
+                touch .openclaw-migrating
+                mkdir -p .openclaw
                 find /home/node -mindepth 1 -maxdepth 1 ! -name lost+found ! -name .openclaw \
-                  -exec mv -t /home/node/.openclaw {} +
+                  ! -name .openclaw-migrating -exec mv -t /home/node/.openclaw {} +
+                rm .openclaw-migrating
                 echo "Moved existing state to ~/.openclaw"
               fi
               mkdir -p .openclaw/workspace

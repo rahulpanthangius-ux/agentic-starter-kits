@@ -81,7 +81,7 @@ Edit `manifests/02-configmap.yaml` and replace the placeholder values:
   "providers": {
     "vllm": {
       "baseUrl": "https://ogx-my-namespace.apps.my-cluster.example.com/v1",
-      "apiKey": "not-needed",
+      "apiKey": "${VLLM_API_KEY}",
       "models": [{
         "id": "vllm/gpt-oss-120b",
         "name": "vllm/gpt-oss-120b"
@@ -103,7 +103,7 @@ Edit `manifests/02-configmap.yaml` and replace the placeholder values:
   "providers": {
     "vllm": {
       "baseUrl": "https://vllm-my-model.apps.my-cluster.example.com/v1",
-      "apiKey": "not-needed",
+      "apiKey": "${VLLM_API_KEY}",
       "models": [{
         "id": "gpt-oss-120b",
         "name": "gpt-oss-120b"

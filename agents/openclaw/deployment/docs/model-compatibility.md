@@ -22,7 +22,7 @@ OpenClaw relies on models that support structured tool-calling (function calling
 | **qwen3.5:27b** | Ollama (local) | Working | 2026-04-13 | Tools work, but 41GB RAM usage makes it impractical locally |
 | **llama3.2:3b** | Ollama (local) | Partial | 2026-04-13 | Executes tools but gets confused by OpenClaw's internal system prompts |
 | **phi4-mini:3.8b** | Ollama (local) | Broken | 2026-04-13 | Emits raw JSON in response body instead of native tool calls |
-| **codex/gpt-5.4** | Codex Harness | Expected | 2026-04-13 | Routes through Codex app-server; requires sidecar deployment |
+| **codex/gpt-5.4** | Codex Harness | Expected | Not tested | Routes through Codex app-server; requires sidecar deployment |
 
 ## Critical Warning: Hallucinated Tool Results
 

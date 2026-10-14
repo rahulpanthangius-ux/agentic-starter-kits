@@ -47,7 +47,7 @@ The collector runs as a sidecar in the OpenClaw pod, receiving spans on localhos
 The overlay's [`rbac.yaml`](../overlays/mlflow-tracing/rbac.yaml) creates:
 
 - A dedicated `openclaw-tracing` **ServiceAccount** for the OpenClaw pod
-- A **RoleBinding** to the operator-provided `mlflow-integration` ClusterRole (see [RBAC Setup](../../../../docs/mlflow-openshift-auth-and-tls.md#rbac-setup) for details)
+- A **RoleBinding** to the `mlflow-integration` ClusterRole (shipped by the MLflow operator, except on RHOAI 3.3.1 where you create it first; see [Prerequisites](#prerequisites) and [RBAC Setup](../../../../docs/mlflow-openshift-auth-and-tls.md#rbac-setup) for details)
 
 The OTel collector reads the SA token from `/var/run/secrets/kubernetes.io/serviceaccount/token` via its `bearertokenauth` extension and sends it as a bearer token with every request.
 

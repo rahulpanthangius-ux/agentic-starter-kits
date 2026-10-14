@@ -21,6 +21,7 @@ Alternative deployment method using the [claw-installer](https://github.com/sall
 - **OpenShift Version:** 4.17+ (tested on 4.19.18)
 - **Access Level:** Namespace-scoped — no cluster-admin needed
 - **CLI Tools:** `oc` (OpenShift CLI), `node` (Node.js 22+), `git`
+- **Container Runtime:** Podman (default for `run.sh`) or Docker (`./run.sh --runtime docker`)
 - **Storage:** Block storage class (gp3-csi, managed-csi, thin-csi) — avoid NFS (SQLite requires POSIX file locking)
 - **Model Endpoint:** vLLM, KServe, or external API (OpenAI, Anthropic, Vertex AI)
 
@@ -438,7 +439,7 @@ oc scale deployment/openclaw --replicas=1 -n <namespace>
 | **NFS incompatible** | SQLite requires POSIX file locking; NFS advisory locks are unreliable | Use block storage (gp3-csi, managed-csi, thin-csi) |
 | **Config auto-override** | Gateway may overwrite ConfigMap settings with auto-detected providers on first start | Verify model in logs after every rollout; patch ConfigMap if overridden |
 | **Heartbeat on by default** | Fires every 30 min, consumes model API tokens even when idle | Set `agents.defaults.heartbeat.every: "0m"` in ConfigMap |
-| **PVC data lost on delete** | Deleting the PVC removes all agent sessions, SQLite state, and logs | Back up PVC data before deletion; set the bound PersistentVolume (or the StorageClass default) to the `Retain` reclaim policy |
+| **PVC data lost on delete** | Deleting the PVC removes all agent sessions, SQLite state, and logs | Back up PVC data before deletion; set `persistentVolumeReclaimPolicy: Retain` on the bound PersistentVolume (`oc patch pv`, needs cluster-level access). A StorageClass `reclaimPolicy` only applies to volumes provisioned later |
 | **Device pairing required** | Every new browser session needs a one-time device approval via CLI | Use installer's **Open** action, or approve via `oc exec` |
 
 ### G. References
