@@ -1,0 +1,76 @@
+╭─────────────────────────────────────────────────────────── 🤖 Agent Started ────────────────────────────────────────────────────────────╮
+│                                                                                                                                         │
+│  Agent: Research Analyst                                                                                                                │
+│                                                                                                                                         │
+│  Task: Research Quantum Computing. List 5 key facts and 2 open questions.                                                               │
+│                                                                                                                                         │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────────────────────────────────────── ✅ Agent Final Answer ─────────────────────────────────────────────────────────╮
+│                                                                                                                                         │
+│  Agent: Research Analyst                                                                                                                │
+│                                                                                                                                         │
+│  Final Answer:                                                                                                                          │
+│  **Quantum Computing – Research Brief**                                                                                                 │
+│  1. Qubits leverage superposition and entanglement to operate on exponential state spaces.                                             │
+│  2. NISQ devices have gate error rates around 10⁻³ to 10⁻², restricting circuit depth.                                                  │
+│  3. Google's 2019 Sycamore demonstrated limited quantum advantage on synthetic sampling tasks.                                          │
+│  4. Fault-tolerant logical qubits via surface code require 10⁴–10⁵ physical qubits per logical qubit.                                   │
+│  5. Near-term utility focuses on quantum chemistry, VQE/QAOA optimization, and quantum kernel ML.                                       │
+│  Open Questions: Which hardware architecture scales best? What is the practical quantum-classical advantage boundary?                  │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────────────────────────── 🤖 Agent Started ────────────────────────────────────────────────────────────╮
+│                                                                                                                                         │
+│  Agent: Technical Writer (Skeptical Technical Reviewer)                                                                                 │
+│                                                                                                                                         │
+│  Task: Using the research brief, write a 250-word explainer on Quantum Computing.                                                       │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────────────────────────────────────── ✅ Agent Final Answer ─────────────────────────────────────────────────────────╮
+│                                                                                                                                         │
+│  Agent: Technical Writer (Skeptical Technical Reviewer)                                                                                 │
+│                                                                                                                                         │
+│  Final Answer:                                                                                                                          │
+│  Quantum computing is frequently hyped as a paradigm shift, but a rigorous analysis reveals significant engineering bottlenecks.        │
+│  While qubits leverage superposition and entanglement to represent exponential state spaces (2ⁿ configurations), current hardware is   │
+│  severely constrained by environmental noise. Today's Noisy Intermediate-Scale Quantum (NISQ) processors experience error rates between│
+│  0.1% and 1%, limiting computations to a few hundred gate operations before decoherence destroys the signal.                             │
+│                                                                                                                                         │
+│  High-profile claims like Google's 2019 Sycamore experiment demonstrated quantum advantage only on synthetic, non-useful random-circuit │
+│  sampling tasks, and classical algorithm improvements have since narrowed that gap. Furthermore, fault-tolerant quantum computing     │
+│  remains distant: surface-code error correction requires an estimated 10,000 to 100,000 physical qubits to yield a single logical qubit│
+│  with acceptable error rates (<10⁻⁹). Near-term practical utility is restricted to narrow domains like VQE or small-molecule chemistry. │
+│  Without scalable error-corrected architectures, commercial quantum computing claims must be viewed with heavy technical skepticism.    │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────────────────────────── 🤖 Agent Started ────────────────────────────────────────────────────────────╮
+│                                                                                                                                         │
+│  Agent: Editor                                                                                                                          │
+│                                                                                                                                         │
+│  Task: Edit the explainer. Tighten it and mark any claim needing a source.                                                              │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────────────────────────────────────── ✅ Agent Final Answer ─────────────────────────────────────────────────────────╮
+│                                                                                                                                         │
+│  Agent: Editor                                                                                                                          │
+│                                                                                                                                         │
+│  Final Answer:                                                                                                                          │
+│  Quantum computing is frequently touted as a revolutionary paradigm, but rigorous analysis highlights severe engineering limits.        │
+│  While qubits utilize superposition and entanglement to encode 2ⁿ states [source needed], current hardware remains noise-bound.         │
+│  NISQ processors suffer gate error rates of 0.1%–1% [source needed], capping usable circuit depth to a few hundred operations before    │
+│  decoherence destroys computation.                                                                                                      │
+│                                                                                                                                         │
+│  Milestones like Google's 2019 Sycamore experiment demonstrated advantage only on narrow, synthetic sampling tasks [source needed], and │
+│  subsequent classical algorithm refinements have narrowed the gap. Fault tolerance remains far off: surface-code error correction     │
+│  projects a requirement of 10,000 to 100,000 physical qubits per logical qubit [source needed]. Practical near-term utility remains      │
+│  confined to niche applications such as VQE and small-molecule simulation. Claims of immediate commercial viability should be treated   │
+│  with heavy technical skepticism.                                                                                                       │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────── Crew Completion ────────────────────────────────────────────────────────────╮
+│                                                                                                                                         │
+│  Crew Execution Completed                                                                                                               │
+│  Name: crew                                                                                                                             │
+│  Final Output: Critical Technical Assessment of Quantum Computing                                                                      │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯

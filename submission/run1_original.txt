@@ -1,0 +1,120 @@
+╭─────────────────────────────────────────────────────────── 🤖 Agent Started ────────────────────────────────────────────────────────────╮
+│                                                                                                                                         │
+│  Agent: Research Analyst                                                                                                                │
+│                                                                                                                                         │
+│  Task: Research Quantum Computing. List 5 key facts and 2 open questions.                                                               │
+│                                                                                                                                         │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────────────────────────────────────── ✅ Agent Final Answer ─────────────────────────────────────────────────────────╮
+│                                                                                                                                         │
+│  Agent: Research Analyst                                                                                                                │
+│                                                                                                                                         │
+│  Final Answer:                                                                                                                          │
+│  **Quantum Computing – Research Brief**                                                                                                 │
+│                                                                                                                                         │
+│  **Key Facts**                                                                                                                          │
+│  - **Qubit Superposition & Entanglement:** Qubits can occupy a superposition of 0 and 1, and entangled qubits can represent 2ⁿ basis    │
+│    states with only n qubits, giving an exponential state space.                                                                        │
+│  - **Quantum Gate Model & Error Rates:** The dominant computational model uses unitary quantum gates (e.g., Hadamard, CNOT, T) arranged  │
+│    in circuits. Current noisy intermediate-scale quantum (NISQ) devices have gate error rates on the order of 10⁻³–10⁻², limiting circuit │
+│    depth to a few hundred operations before decoherence overwhelms the computation.                                                     │
+│  - **Demonstrated Quantum Advantage (Limited Scope):** In 2019 Google’s Sycamore processor performed a random-circuit sampling task in   │
+│    ~200 seconds that was estimated to take ~10,000 years on a state-of-the-art classical supercomputer.                                 │
+│  - **Quantum Error Correction is Feasible but Resource-Intensive:** Surface-code architecture shows that logical qubits can be protected │
+│    with a threshold error rate ≈1 × 10⁻². Achieving a single logical qubit with error < 10⁻⁹ is projected to need ~10⁴–10⁵ physical    │
+│    qubits per logical qubit.                                                                                                            │
+│  - **Algorithmic Landscape Beyond Factoring:** Practical quantum advantage is expected first in specialized domains such as quantum     │
+│    chemistry, optimization, and machine learning.                                                                                       │
+│                                                                                                                                         │
+│  **Open Questions**                                                                                                                     │
+│  - **Scalable Fault-Tolerant Architecture:** What physical qubit platform will ultimately deliver low error rates, high connectivity,    │
+│    and manufacturability?                                                                                                               │
+│  - **Quantum-Classical Algorithmic Boundary:** For which real-world problem classes will quantum algorithms provide a provable,       │
+│    asymptotic advantage?                                                                                                                │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────────────────────────────────────────── 📋 Task Completion ───────────────────────────────────────────────────────────╮
+│                                                                                                                                         │
+│  Task Completed                                                                                                                         │
+│  Name: Research Quantum Computing. List 5 key facts and 2 open questions.                                                               │
+│  Agent: Research Analyst                                                                                                                │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────── 📋 Task Started ────────────────────────────────────────────────────────────╮
+│                                                                                                                                         │
+│  Task Started                                                                                                                           │
+│  Name: Using the research brief, write a 250-word explainer on Quantum Computing.                                                       │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────────────────────────── 🤖 Agent Started ────────────────────────────────────────────────────────────╮
+│                                                                                                                                         │
+│  Agent: Technical Writer                                                                                                                │
+│                                                                                                                                         │
+│  Task: Using the research brief, write a 250-word explainer on Quantum Computing.                                                       │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────────────────────────────────────── ✅ Agent Final Answer ─────────────────────────────────────────────────────────╮
+│                                                                                                                                         │
+│  Agent: Technical Writer                                                                                                                │
+│                                                                                                                                         │
+│  Final Answer:                                                                                                                          │
+│  Quantum computing rewrites the rules of calculation by using quantum bits, or qubits, instead of ordinary binary bits. A classical     │
+│  bit can be either 0 or 1, but a qubit can occupy a superposition of both states at once. When several qubits become entangled, the      │
+│  joint system can represent 2ⁿ different configurations with only n qubits, giving an exponential growth in the amount of information   │
+│  a processor can hold.                                                                                                                  │
+│                                                                                                                                         │
+│  A quantum program is built from quantum gates—operations such as the Hadamard, CNOT, and T gate that manipulate probability            │
+│  amplitudes of qubits. These gates are arranged in circuits, much like logic gates in a classical computer, but they must be performed  │
+│  with precision. Today’s noisy intermediate-scale quantum (NISQ) devices suffer gate error rates of 0.1 % to 1 %, which limits         │
+│  circuits to a few hundred steps before decoherence destroys the computation.                                                           │
+│                                                                                                                                         │
+│  In 2019 Google’s Sycamore chip completed a random-circuit sampling task in three minutes, a job that would have taken a supercomputer │
+│  thousands of years. Although later analysis softened the claim, the experiment marked the first recognized quantum-advantage          │
+│  demonstration.                                                                                                                         │
+│                                                                                                                                         │
+│  Error correction can, in principle, protect logical qubits, but the surface-code scheme requires tens of thousands of physical qubits │
+│  to create a logical qubit—far beyond today’s machines. Consequently, near-term advantage is expected in niche areas such as           │
+│  simulating small molecules, solving optimization problems, or applying machine-learning kernels.                                     │
+│                                                                                                                                         │
+│  Open challenges include deciding which qubit technology will scale to millions of low-error units and identifying problems where the   │
+│  quantum speed-up outweighs the overhead of error correction and classical preprocessing.                                               │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────────────────────────────────────────── 📋 Task Completion ───────────────────────────────────────────────────────────╮
+│                                                                                                                                         │
+│  Task Completed                                                                                                                         │
+│  Name: Using the research brief, write a 250-word explainer on Quantum Computing.                                                       │
+│  Agent: Technical Writer                                                                                                                │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────── 📋 Task Started ────────────────────────────────────────────────────────────╮
+│                                                                                                                                         │
+│  Task Started                                                                                                                           │
+│  Name: Edit the explainer. Tighten it and mark any claim needing a source.                                                              │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────────────────────────── 🤖 Agent Started ────────────────────────────────────────────────────────────╮
+│                                                                                                                                         │
+│  Agent: Editor                                                                                                                          │
+│                                                                                                                                         │
+│  Task: Edit the explainer. Tighten it and mark any claim needing a source.                                                              │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────────────────────────────────────── ✅ Agent Final Answer ─────────────────────────────────────────────────────────╮
+│                                                                                                                                         │
+│  Agent: Editor                                                                                                                          │
+│                                                                                                                                         │
+│  Final Answer:                                                                                                                          │
+│  **Quantum Computing – Research Brief**                                                                                                 │
+│                                                                                                                                         │
+│  **Key Facts**                                                                                                                          │
+│  - **Qubit superposition & entanglement:** Qubits can occupy a superposition of 0 and 1, and entangled qubits can represent 2ⁿ basis     │
+│    states with only n qubits, giving an exponential state space. [source needed]                                                        │
+│  - **Gate model & error rates:** The prevailing model uses unitary gates (Hadamard, CNOT, T) arranged in circuits. Current NISQ         │
+│    devices exhibit gate error rates of ≈10⁻³–10⁻², restricting useful circuit depth to a few hundred operations before decoherence       │
+│    dominates. [source needed]                                                                                                           │
+│  - **Demonstrated quantum advantage (limited scope):** In 2019 Google’s Sycamore processor performed a random-circuit sampling task in   │
+│    ~200 s, a computation estimated to require ~10 000 years on a leading classical supercomputer. Subsequent analyses suggest the       │
+│    classical benchmark was overstated, but the experiment remains the first widely cited instance of a quantum processor outperforming    │
+│    known classical algorithms for that specific problem.
